@@ -19,7 +19,7 @@ const UseStatePage = () => {
   const decrementValue = () => setValue((prev) => prev - 1);
   const resetValue = () => setValue(DEFAULT_VALUE);
 
-  const [state, setState] = useState({ value: 0, theme: "black" });
+  const [state, setState] = useState({ value: DEFAULT_VALUE, theme: "black" });
   const value2 = state.value;
   const theme = state.theme;
 
@@ -86,7 +86,7 @@ const UseStatePage = () => {
         </p>
         <p>
           In this case we have to use spread operator to make sure that react
-          doesn't overwrite the previous state. Refer the Source Code Or {" "}
+          doesn't overwrite the previous state. Refer the Source Code Or{" "}
           <a
             href="https://www.youtube.com/watch?v=O6P86uwfdR0&t=11m15s"
             target="_blank"
