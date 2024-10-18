@@ -9,6 +9,7 @@ const navLinks: Links[] = [
   { label: "Learn About useRef", url: "/hooks/useRef" },
   { label: "Learn About useMemo", url: "/hooks/useMemo" },
   { label: "Learn About useContext", url: "/hooks/useContext" },
+  { label: "Learn About useState", url: "/hooks/useState" },
 ];
 
 const LandingPage = () => {
