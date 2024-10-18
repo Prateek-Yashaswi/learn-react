@@ -27,13 +27,3 @@ jobs:
 
       - name: Build the application
         run: npm run build
-
-      - name: Set up Git for deployment
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      
-      - name: Deploy
-        run: npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
