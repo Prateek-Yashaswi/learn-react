@@ -8,6 +8,7 @@ type Links = {
 const navLinks: Links[] = [
   { label: "Learn About useRef", url: "/hooks/useRef" },
   { label: "Learn About useMemo", url: "/hooks/useMemo" },
+  { label: "Learn About useContext", url: "/hooks/useContext" },
 ];
 
 const LandingPage = () => {
