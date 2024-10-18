@@ -5,11 +5,13 @@ const RENDER_COUNT_DEFAULT = 1;
 const UseRefHookPage = () => {
   const [name, setName] = useState<string>("");
   const renderCountRef = useRef(RENDER_COUNT_DEFAULT);
+  const prevRef = useRef("");
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
+    prevRef.current = name;
     renderCountRef.current = renderCountRef.current + 1;
-  });
+  }, [name]);
 
   const focus = () => {
     inputRef.current?.focus();
@@ -23,14 +25,16 @@ const UseRefHookPage = () => {
           We Have an Input element which takes a name & a paragraph tag that
           reflects the change. We also want to show how many times a component
           was rendered on the screen. If we use React's useState hook, we might
-          fall into problems of getting into an infinite loop. Here, the way to
+          fall into problems of getting into an infinite loop. The way to
           handle it is using react's useRef.
         </p>
 
         <p>
-          Ref is similar to states & it persists between renders of a
-          component.The difference between useState and useRef is useRef does
-          not re-renders your entire application when anything changes.
+          The useRef hook in React creates a mutable reference that persists
+          across component renders. Unlike useState, which manages state and
+          triggers re-rendering, useRef is primarily used to access and
+          manipulate the DOM or to store mutable values that don't trigger
+          re-renders. It returns a mutable object with a current property.
         </p>
         <input
           type="text"
@@ -39,6 +43,11 @@ const UseRefHookPage = () => {
         />
         <p>My Name Is: {name}</p>
         <p>Name Rendered For: {renderCountRef.current} times.</p>
+        <p>Previous Name: {prevRef.current}</p>
+        <p>
+          We can also use refs to store the previous value of the names as shown
+          above
+        </p>
       </div>
       <hr />
       <div>
@@ -51,15 +60,34 @@ const UseRefHookPage = () => {
         <button onClick={focus}>Focus</button>
       </div>
 
-      <div className="credits-content" style={{ marginTop: "1rem" }}>
-        <h3>Credits</h3>
-        <a
-          href="https://www.youtube.com/watch?v=t2ypzz6gJm0"
-          target="_blank"
-          rel="noreferrer"
+      <div className="references" style={{ marginTop: "1rem" }}>
+        <h3>References</h3>
+        <div
+          className="links"
+          style={{ display: "flex", flexDirection: "column", gap: 6 }}
         >
-          Link to the source video
-        </a>
+          <a
+            href="https://www.youtube.com/watch?v=t2ypzz6gJm0"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Link to the source video
+          </a>
+          <a
+            href="https://github.com/Prateek-Yashaswi/learn-react/blob/master/src/hooks/UseRefHook.tsx"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Source Code
+          </a>
+          <a
+            href="https://medium.com/@rdhamnaskar11/understanding-of-when-to-use-usestate-and-useref-hooks-6f7f60f79c82"
+            target="_blank"
+            rel="noreferrer"
+          >
+            When to use useRef & useState
+          </a>
+        </div>
       </div>
     </div>
   );
