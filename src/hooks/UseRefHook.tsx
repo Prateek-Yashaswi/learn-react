@@ -18,15 +18,15 @@ const UseRefHookPage = () => {
   };
 
   return (
-    <div>
+    <div style={{width: "50%"}}>
       <h3>This Page Is For Understanding React useRef Hook.</h3>
       <div className="input-count-render">
         <p>
           We Have an Input element which takes a name & a paragraph tag that
           reflects the change. We also want to show how many times a component
           was rendered on the screen. If we use React's useState hook, we might
-          fall into problems of getting into an infinite loop. The way to
-          handle it is using react's useRef.
+          fall into problems of getting into an infinite loop. The way to handle
+          it is using react's useRef.
         </p>
 
         <p>
@@ -70,6 +70,7 @@ const UseRefHookPage = () => {
             href="https://www.youtube.com/watch?v=t2ypzz6gJm0"
             target="_blank"
             rel="noreferrer"
+            style={{ width: "fit-content" }}
           >
             Link to the source video
           </a>
@@ -77,6 +78,7 @@ const UseRefHookPage = () => {
             href="https://github.com/Prateek-Yashaswi/learn-react/blob/master/src/hooks/UseRefHook.tsx"
             target="_blank"
             rel="noreferrer"
+            style={{ width: "fit-content" }}
           >
             Source Code
           </a>
@@ -84,6 +86,7 @@ const UseRefHookPage = () => {
             href="https://medium.com/@rdhamnaskar11/understanding-of-when-to-use-usestate-and-useref-hooks-6f7f60f79c82"
             target="_blank"
             rel="noreferrer"
+            style={{ width: "fit-content" }}
           >
             When to use useRef & useState
           </a>
