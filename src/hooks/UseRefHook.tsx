@@ -18,7 +18,7 @@ const UseRefHookPage = () => {
   };
 
   return (
-    <div style={{width: "50%"}}>
+    <div>
       <h3>This Page Is For Understanding React useRef Hook.</h3>
       <div className="input-count-render">
         <p>

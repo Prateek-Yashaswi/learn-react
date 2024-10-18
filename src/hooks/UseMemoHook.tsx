@@ -25,9 +25,8 @@ const UseMemoHookPage = () => {
   }, [number]);
 
   return (
-    <div
-      style={{ display: "flex", gap: 8, flexDirection: "column", width: "50%" }}
-    >
+    <div style={{ display: "flex", gap: 8, flexDirection: "column" }}>
+      <h3>This Page Is For Understanding React useMemo Hook.</h3>
       <p>
         We have a input and a button here. Input takes a number and displays the
         doubled number. The button is responsible for toggling the theme of the
@@ -67,28 +66,26 @@ const UseMemoHookPage = () => {
         change the theme) we don't experice the delay.
       </p>
 
-      <p>
-        Here are some major use cases of useMemo:
-        <ul>
-          <li>
-            When you know that the function that is going to be executed on
-            renders is slow but we don't need to execute it on every state
-            change. Eg. Configurations codes (if any) are only needed when the
-            website loads up for the first time & not at all needed with every
-            state/DOM update.
-          </li>
-          <li>
-            In case of referential equality -{" "}
-            <a
-              href="https://www.youtube.com/watch?v=THL1OPn72vo&t=393s"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Watch This Timestamped Video To Understand
-            </a>
-          </li>
-        </ul>
-      </p>
+      <p>Here are some major use cases of useMemo:</p>
+      <ul style={{ marginBottom: "0.5rem" }}>
+        <li>
+          When you know that the function that is going to be executed on
+          renders is slow but we don't need to execute it on every state change.
+          Eg. Configurations codes (if any) are only needed when the website
+          loads up for the first time & not at all needed with every state/DOM
+          update.
+        </li>
+        <li>
+          In case of referential equality -{" "}
+          <a
+            href="https://www.youtube.com/watch?v=THL1OPn72vo&t=393s"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Watch This Timestamped Video To Understand
+          </a>
+        </li>
+      </ul>
       <input
         style={{ padding: "1rem" }}
         type="number"
