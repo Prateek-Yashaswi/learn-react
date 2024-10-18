@@ -43,7 +43,7 @@ const UseStatePage = () => {
 
   return (
     <div>
-      <h3>This Page Is For Understanding React useContext Hook.</h3>
+      <h3>This Page Is For Understanding React useState Hook.</h3>
       <div
         style={{
           display: "flex",

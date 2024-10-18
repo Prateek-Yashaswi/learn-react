@@ -10,6 +10,7 @@ const navLinks: Links[] = [
   { label: "Learn About useMemo", url: "/hooks/useMemo" },
   { label: "Learn About useContext", url: "/hooks/useContext" },
   { label: "Learn About useState", url: "/hooks/useState" },
+  { label: "Learn About useEffect", url: "/hooks/useEffect" },
 ];
 
 const LandingPage = () => {

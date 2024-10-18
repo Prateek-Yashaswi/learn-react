@@ -112,7 +112,7 @@ const UseMemoHookPage = () => {
         Video
       </a>
       <a
-        href="https://github.com/Prateek-Yashaswi/learn-react/blob/master/src/hooks/UseMemoHook.tsx"
+        href="https://github.com/Prateek-Yashaswi/learn-react/blob/master/src/hooks/use-memo/UseMemoHook.tsx"
         rel="noreferrer"
         target="_blank"
         style={{ width: "fit-content" }}

@@ -75,7 +75,7 @@ const UseRefHookPage = () => {
             Link to the source video
           </a>
           <a
-            href="https://github.com/Prateek-Yashaswi/learn-react/blob/master/src/hooks/UseRefHook.tsx"
+            href="https://github.com/Prateek-Yashaswi/learn-react/blob/master/src/hooks/use-ref/UseRefHook.tsx"
             target="_blank"
             rel="noreferrer"
             style={{ width: "fit-content" }}
