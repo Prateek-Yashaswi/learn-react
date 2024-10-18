@@ -27,6 +27,12 @@ jobs:
 
       - name: Build the application
         run: npm run build
+
+      - name: Configure Git
+        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+        run: |
+          git config --global user.email "prateekyashaswi34@gmail.com"
+          git config --global user.name "Prateek-Yashaswi"
       
       - name: Deploy
         if: github.ref == 'refs/heads/master' && github.event_name == 'push'
