@@ -15,6 +15,10 @@ const navLinks: Links[] = [
     label: "Learn About useImperativeHandle",
     url: "/hooks/useImperativeHandle",
   },
+  {
+    label: "Learn About useReducer",
+    url: "/hooks/useReducer",
+  },
 ];
 
 const LandingPage = () => {

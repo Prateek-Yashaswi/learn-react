@@ -1,12 +1,13 @@
 import { RouteObject } from "react-router-dom";
 import App from "./App";
-import UseRefHookPage from "./hooks/use-ref/UseRefHook";
-import LandingPage from "./pages/landing-page";
-import UseMemoHookPage from "./hooks/use-memo/UseMemoHook";
 import UseContextHookPage from "./hooks/use-context/UseContextHook";
-import UseStatePage from "./hooks/use-state/UseStatePage";
 import UseEffectPage from "./hooks/use-effect/UseEffectPage";
 import UseImperativeHandlePage from "./hooks/use-imperative-handle/UseImperativeHandlePage";
+import UseMemoHookPage from "./hooks/use-memo/UseMemoHook";
+import UseRefHookPage from "./hooks/use-ref/UseRefHook";
+import UseStatePage from "./hooks/use-state/UseStatePage";
+import LandingPage from "./pages/landing-page";
+import UseReducerPage from "./hooks/use-reducer/UseReducerPage";
 
 const appRoutes: RouteObject[] = [
   {
@@ -22,6 +23,10 @@ const appRoutes: RouteObject[] = [
       {
         path: "/hooks/useImperativeHandle",
         Component: UseImperativeHandlePage,
+      },
+      {
+        path: "/hooks/useReducer",
+        Component: UseReducerPage,
       },
     ],
   },
