@@ -27,7 +27,7 @@ const UseImperativeHandlePage = () => {
         source code for the implementation.
       </h3>
       <CustomCounter ref={counterRef} />
-      <button onClick={counterRef.current?.reset}>Reset Counter</button>
+      <button onClick={() => counterRef.current?.reset()}>Reset Counter</button>
       <div style={{ display: "flex", gap: 8, flexDirection: "column" }}>
         <h3>References</h3>
         {REFERENCES.map((item, idx) => (
