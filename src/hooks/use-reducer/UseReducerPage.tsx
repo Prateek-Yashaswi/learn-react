@@ -1,4 +1,4 @@
-import { FormEvent, useReducer, useState } from "react";
+import { FormEvent, useReducer, useRef, useState } from "react";
 import { CounterReducer, DEFAULT_VALUE } from "./Counter/Counter.dispatch";
 import CounterComponent from "./Counter/CounterComponent";
 import Todo from "./Todo/Todo";
@@ -8,6 +8,7 @@ import { REDUCER_REFERENCES } from "./References";
 import Links from "../../components/Links";
 
 const UseReducerPage = () => {
+  const inputRef = useRef<HTMLInputElement>(null);
   const [state, counterDispatch] = useReducer(CounterReducer, {
     value: DEFAULT_VALUE,
   });
@@ -18,6 +19,7 @@ const UseReducerPage = () => {
     e.preventDefault();
     todoDispatch({ action: TodoActions.ADD, payload: { title: input } });
     setInput("");
+    inputRef.current?.focus();
   };
 
   return (
@@ -36,6 +38,7 @@ const UseReducerPage = () => {
           style={{ display: "flex", gap: 12 }}
         >
           <input
+            ref={inputRef}
             required
             type="text"
             value={input}
