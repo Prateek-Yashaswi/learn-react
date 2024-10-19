@@ -19,6 +19,10 @@ const navLinks: Links[] = [
     label: "Learn About useReducer",
     url: "/hooks/useReducer",
   },
+  {
+    label: "Learn About useCallback",
+    url: "/hooks/useCallback",
+  },
 ];
 
 const LandingPage = () => {

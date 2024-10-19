@@ -8,6 +8,7 @@ import UseRefHookPage from "./hooks/use-ref/UseRefHook";
 import UseStatePage from "./hooks/use-state/UseStatePage";
 import LandingPage from "./pages/landing-page";
 import UseReducerPage from "./hooks/use-reducer/UseReducerPage";
+import UseCallbackPage from "./hooks/use-callback/UseCallback";
 
 const appRoutes: RouteObject[] = [
   {
@@ -27,6 +28,10 @@ const appRoutes: RouteObject[] = [
       {
         path: "/hooks/useReducer",
         Component: UseReducerPage,
+      },
+      {
+        path: "/hooks/useCallback",
+        Component: UseCallbackPage,
       },
     ],
   },
