@@ -6,6 +6,7 @@ import UseMemoHookPage from "./hooks/use-memo/UseMemoHook";
 import UseContextHookPage from "./hooks/use-context/UseContextHook";
 import UseStatePage from "./hooks/use-state/UseStatePage";
 import UseEffectPage from "./hooks/use-effect/UseEffectPage";
+import UseImperativeHandlePage from "./hooks/use-imperative-handle/UseImperativeHandlePage";
 
 const appRoutes: RouteObject[] = [
   {
@@ -18,6 +19,10 @@ const appRoutes: RouteObject[] = [
       { path: "/hooks/useContext", Component: UseContextHookPage },
       { path: "/hooks/useState", Component: UseStatePage },
       { path: "/hooks/useEffect", Component: UseEffectPage },
+      {
+        path: "/hooks/useImperativeHandle",
+        Component: UseImperativeHandlePage,
+      },
     ],
   },
 ];
